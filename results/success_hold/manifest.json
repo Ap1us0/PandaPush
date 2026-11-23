@@ -1,0 +1,86 @@
+{
+  "eval_seed": 162000,
+  "episodes": 192,
+  "success_target_pct": 95,
+  "profiles": [
+    "nominal",
+    "size_ood",
+    "friction_ood",
+    "ood"
+  ],
+  "baseline": "peak_reference",
+  "models": [
+    {
+      "arm": "peak_reference",
+      "seed": 11,
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "config": "results/success_hold/development/configs/150k_peak11/seed11.json"
+    },
+    {
+      "arm": "peak_reference",
+      "seed": 29,
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "config": "results/success_hold/development/configs/50k_speed40_24/seed29.json"
+    },
+    {
+      "arm": "peak_reference",
+      "seed": 47,
+      "checkpoint": "results/success_95/training/seed47_ood/checkpoint_170000.zip",
+      "config": "results/success_hold/development/configs/170k_ood_speed42_26/seed47.json"
+    },
+    {
+      "arm": "previous_high_success",
+      "seed": 11,
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "config": "results/success_hold/development/configs/150k_high11/seed11.json"
+    },
+    {
+      "arm": "previous_high_success",
+      "seed": 29,
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "config": "results/success_hold/development/configs/50k_speed42_26/seed29.json"
+    },
+    {
+      "arm": "previous_high_success",
+      "seed": 47,
+      "checkpoint": "results/success_95/training/seed47_ood/checkpoint_170000.zip",
+      "config": "results/success_hold/development/configs/170k_ood_speed42_26/seed47.json"
+    },
+    {
+      "arm": "peak_matched",
+      "seed": 11,
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "config": "results/success_hold/development/configs/150k_peak11/seed11.json"
+    },
+    {
+      "arm": "peak_matched",
+      "seed": 29,
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "config": "results/success_hold/development/configs/50k_hold3_40_24/seed29.json"
+    },
+    {
+      "arm": "peak_matched",
+      "seed": 47,
+      "checkpoint": "results/success_95/training/seed47_ood/checkpoint_170000.zip",
+      "config": "results/success_hold/development/configs/170k_ood_hold3_38_24/seed47.json"
+    },
+    {
+      "arm": "high_success_matched",
+      "seed": 11,
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "config": "results/success_hold/development/configs/150k_peak11/seed11.json"
+    },
+    {
+      "arm": "high_success_matched",
+      "seed": 29,
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "config": "results/success_hold/development/configs/50k_hold3_41_25/seed29.json"
+    },
+    {
+      "arm": "high_success_matched",
+      "seed": 47,
+      "checkpoint": "results/success_95/training/seed47_ood/checkpoint_170000.zip",
+      "config": "results/success_hold/development/configs/170k_ood_hold3_38_24/seed47.json"
+    }
+  ]
+}

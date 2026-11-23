@@ -1,0 +1,58 @@
+{
+  "peak_reference": {
+    "options": [
+      "150k_peak11",
+      "50k_speed40_24",
+      "170k_ood_speed42_26"
+    ],
+    "successes": 265,
+    "episodes": 288,
+    "success_pct": 92.01388888888889,
+    "safety_stops": 0,
+    "mean_peak_force_n": 40.342184056347094,
+    "p95_peak_force_n": 51.24703813091821,
+    "max_peak_force_n": 70.36370970047186
+  },
+  "previous_high_success": {
+    "options": [
+      "150k_high11",
+      "50k_speed42_26",
+      "170k_ood_speed42_26"
+    ],
+    "successes": 270,
+    "episodes": 288,
+    "success_pct": 93.75,
+    "safety_stops": 1,
+    "mean_peak_force_n": 43.13920757464459,
+    "p95_peak_force_n": 54.576726329509825,
+    "max_peak_force_n": 70.36370970047186
+  },
+  "peak_matched": {
+    "options": [
+      "150k_peak11",
+      "50k_hold3_40_24",
+      "170k_ood_hold3_38_24"
+    ],
+    "successes": 277,
+    "episodes": 288,
+    "success_pct": 96.18055555555556,
+    "safety_stops": 0,
+    "mean_peak_force_n": 39.38847266800739,
+    "p95_peak_force_n": 49.56291084518488,
+    "max_peak_force_n": 57.87805316317078
+  },
+  "high_success_matched": {
+    "options": [
+      "150k_peak11",
+      "50k_hold3_41_25",
+      "170k_ood_hold3_38_24"
+    ],
+    "successes": 280,
+    "episodes": 288,
+    "success_pct": 97.22222222222223,
+    "safety_stops": 0,
+    "mean_peak_force_n": 40.003333772302476,
+    "p95_peak_force_n": 51.628598643469324,
+    "max_peak_force_n": 61.559317870667755
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "arms": [
+    "baseline",
+    "aligned_handoff"
+  ],
+  "batches": {
+    "align_a": {
+      "first_seed": 179000,
+      "episodes": 128
+    },
+    "align_b": {
+      "first_seed": 180000,
+      "episodes": 128
+    }
+  },
+  "alignment": {
+    "lateral_tolerance_m": 0.005,
+    "height_tolerance_m": 0.006,
+    "ready_gap_m": 0.012,
+    "aim_gap_m": 0.006,
+    "rear_plane_margin_m": 0.008,
+    "rear_plane_tolerance_m": 0.003,
+    "max_steps": 12
+  },
+  "source_files": {
+    "panda_push/lateral_ablation.py": "198bb4fdbd8bb18c63a605a93eaa994958f1d6ac0f5988550aba5a6658f7009c",
+    "panda_push/precontact_alignment.py": "887fbc82eb8c768c88737c028c5a58dd0abe7bca923deaecf8aff2b23e529abc"
+  },
+  "strict_success_target_pct": 95,
+  "training_steps": 0,
+  "pair_guardrails": [
+    "mean_abs_terminal_lateral_cm",
+    "within_1cm_pct",
+    "within_2cm_pct",
+    "mean_peak_force_n",
+    "p95_peak_force_n",
+    "max_peak_force_n",
+    "safety_stops"
+  ]
+}

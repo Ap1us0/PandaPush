@@ -1,0 +1,38 @@
+{
+  "model": {
+    "arm": "seed29_tuned",
+    "seed": 29,
+    "checkpoint": "results/success_seed29/followup/training/seed29_negative/final.zip",
+    "config": "results/success_seed29/followup/development/configs/90k_negative_medium/seed29.json"
+  },
+  "checkpoint_sha256": "e489981dd10ca97a7b29246cb2c43f37ab352298cbedaf86a6ebc29fb8b6920f",
+  "config_sha256": "d2e633349a9d6e4e3ddf498f35542365cd79814ee869a62cb0867a4565e78a72",
+  "evaluation_env": {
+    "reward_type": "dense",
+    "layout": "random",
+    "physics": "contact_mix",
+    "horizon": 60,
+    "success_radius": 0.03,
+    "success_hold": 3,
+    "contact_speed_mps": 0.24,
+    "free_speed_mps": 0.4,
+    "release_hold_steps": 3,
+    "center_speed_mps": 0.12,
+    "center_radius_m": 0.009,
+    "center_steps": 16,
+    "center_min_alignment": 0.6,
+    "center_goal_projection": true,
+    "force_penalty_weight": 0.0,
+    "force_threshold_n": 25.0,
+    "dense_failure_cost": 1.5
+  },
+  "eval_seed": 175000,
+  "episodes": 192,
+  "profiles": [
+    "nominal",
+    "size_ood",
+    "friction_ood",
+    "ood"
+  ],
+  "deterministic": true
+}

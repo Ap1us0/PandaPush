@@ -1,0 +1,124 @@
+{
+  "dataset": "probe",
+  "arm": "aligned_handoff",
+  "model": {
+    "arm": "seed29_tuned",
+    "seed": 29,
+    "checkpoint": "results/success_seed29/followup/training/seed29_negative/final.zip",
+    "config": "results/success_seed29/followup/development/configs/90k_negative_medium/seed29.json"
+  },
+  "seeds": [
+    175000,
+    175002,
+    175016,
+    175023,
+    175024,
+    175044,
+    175053,
+    175057,
+    175058,
+    175061,
+    175064,
+    175073,
+    175078,
+    175082,
+    175085,
+    175090,
+    175092,
+    175104,
+    175108,
+    175119,
+    175122,
+    175128,
+    175160,
+    175177,
+    175181,
+    175182
+  ],
+  "source_sha256": "60cbc6bcf450d1ee92cd686cb8c6731f3b7eaf92f80b59f0d2bdd6c68b2ac5b7",
+  "checkpoint_sha256": "e489981dd10ca97a7b29246cb2c43f37ab352298cbedaf86a6ebc29fb8b6920f",
+  "config_sha256": "d2e633349a9d6e4e3ddf498f35542365cd79814ee869a62cb0867a4565e78a72",
+  "probe_pairs": [
+    [
+      175016,
+      175053
+    ],
+    [
+      175023,
+      175108
+    ],
+    [
+      175024,
+      175044
+    ],
+    [
+      175057,
+      175104
+    ],
+    [
+      175058,
+      175090
+    ],
+    [
+      175061,
+      175119
+    ],
+    [
+      175073,
+      175092
+    ],
+    [
+      175078,
+      175181
+    ],
+    [
+      175085,
+      175002
+    ],
+    [
+      175122,
+      175082
+    ],
+    [
+      175128,
+      175000
+    ],
+    [
+      175160,
+      175064
+    ],
+    [
+      175182,
+      175177
+    ]
+  ],
+  "steering": {
+    "lateral_tolerance_m": 0.005,
+    "height_tolerance_m": 0.006,
+    "ready_gap_m": 0.012,
+    "aim_gap_m": 0.006,
+    "rear_plane_margin_m": 0.008,
+    "rear_plane_tolerance_m": 0.003,
+    "max_steps": 12
+  },
+  "evaluation_env": {
+    "reward_type": "dense",
+    "layout": "random",
+    "physics": "ood",
+    "horizon": 60,
+    "success_radius": 0.03,
+    "success_hold": 3,
+    "contact_speed_mps": 0.24,
+    "free_speed_mps": 0.4,
+    "release_hold_steps": 3,
+    "center_speed_mps": 0.12,
+    "center_radius_m": 0.009,
+    "center_steps": 16,
+    "center_min_alignment": 0.6,
+    "center_goal_projection": true,
+    "force_penalty_weight": 0.0,
+    "force_threshold_n": 25.0,
+    "dense_failure_cost": 1.5,
+    "contact_diagnostics": true
+  }
+}

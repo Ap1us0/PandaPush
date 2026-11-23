@@ -1,0 +1,37 @@
+{
+  "policy": "sac",
+  "checkpoint": "results\\sac_dense\\seed11_50k\\final.zip",
+  "environment": {
+    "reward_type": "dense",
+    "layout": "random",
+    "physics": "nominal",
+    "horizon": 60,
+    "success_radius": 0.03,
+    "success_hold": 3
+  },
+  "first_seed": 61000,
+  "episodes": 100,
+  "successes": 96,
+  "success_rate": 0.96,
+  "mean_return": 6.203105878382921,
+  "mean_final_error_m": 0.0120386101747863,
+  "mean_minimum_error_m": 0.00994734920008341,
+  "episode_contact_rate": 1.0,
+  "control_contact_rate": 0.2231123231634566,
+  "ineffective_contact_fraction": 0.2452253628724217,
+  "mean_success_steps": 12.666666666666666,
+  "mean_cube_displacement_m": 0.12600876068491718,
+  "mean_cube_path_m": 0.12924157853871487,
+  "mean_tcp_path_m": 0.2993927630272159,
+  "mean_peak_force_n": 16.111892724645756,
+  "max_penetration_m": 0.006131874092440004,
+  "joint_limit_episodes": 0,
+  "mean_action_dx": 0.15455690201923444,
+  "mean_action_dy": 0.022216667689673307,
+  "mean_action_dz": -0.09688179904983674,
+  "mean_action_rms": 0.3499117530817402,
+  "failures": {
+    "missed_goal": 1,
+    "unsafe": 3
+  }
+}

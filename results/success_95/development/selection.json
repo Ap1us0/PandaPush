@@ -1,0 +1,58 @@
+{
+  "peak_reference": {
+    "options": [
+      "150k_44_settle08",
+      "100k_36_24",
+      "150k_36_24"
+    ],
+    "successes": 520,
+    "episodes": 576,
+    "success_pct": 90.27777777777777,
+    "safety_stops": 0,
+    "mean_peak_force_n": 20.66217468681113,
+    "p95_peak_force_n": 46.09156437166183,
+    "max_peak_force_n": 60.83031185069316
+  },
+  "previous_high_success": {
+    "options": [
+      "150k_44_settle08",
+      "50k_original",
+      "150k_36_24"
+    ],
+    "successes": 543,
+    "episodes": 576,
+    "success_pct": 94.27083333333333,
+    "safety_stops": 1,
+    "mean_peak_force_n": 22.997358744371297,
+    "p95_peak_force_n": 49.680267600575824,
+    "max_peak_force_n": 81.97892451673475
+  },
+  "peak_matched": {
+    "options": [
+      "150k_38_25_settle10",
+      "50k_40_24",
+      "170k_ood_42_26"
+    ],
+    "successes": 562,
+    "episodes": 576,
+    "success_pct": 97.56944444444444,
+    "safety_stops": 0,
+    "mean_peak_force_n": 20.345560996835502,
+    "p95_peak_force_n": 45.50115074991339,
+    "max_peak_force_n": 60.8031394032371
+  },
+  "high_success_matched": {
+    "options": [
+      "150k_44_settle08",
+      "50k_42_26",
+      "170k_ood_42_26"
+    ],
+    "successes": 568,
+    "episodes": 576,
+    "success_pct": 98.61111111111111,
+    "safety_stops": 0,
+    "mean_peak_force_n": 21.519276405181895,
+    "p95_peak_force_n": 47.85957711972645,
+    "max_peak_force_n": 60.84927784160356
+  }
+}

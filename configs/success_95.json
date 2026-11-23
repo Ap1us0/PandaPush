@@ -1,0 +1,51 @@
+{
+  "profiles": ["nominal", "size_ood", "friction_ood", "ood"],
+  "development": {"eval_seed": 153000, "episodes": 48},
+  "heldout": {"eval_seed": 157000, "episodes": 160, "success_target_pct": 95},
+  "seeds": [11, 29, 47],
+  "variants": {
+    "original": {},
+    "36_24": {"free_speed_mps": 0.36, "contact_speed_mps": 0.24},
+    "40_24": {"free_speed_mps": 0.40, "contact_speed_mps": 0.24},
+    "44_24": {"free_speed_mps": 0.44, "contact_speed_mps": 0.24},
+    "42_26": {"free_speed_mps": 0.42, "contact_speed_mps": 0.26},
+    "44_settle08": {"free_speed_mps": 0.44, "settle_speed_mps": 0.08},
+    "38_25_settle10": {"free_speed_mps": 0.38, "contact_speed_mps": 0.25, "settle_speed_mps": 0.10}
+  },
+  "checkpoints": [
+    {
+      "name": "150k", "seed": 11, "phase": "archived",
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "variants": ["44_settle08", "36_24", "38_25_settle10"]
+    },
+    {
+      "name": "50k", "seed": 29, "phase": "archived",
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "variants": ["original", "36_24", "40_24", "44_24", "42_26"]
+    },
+    {
+      "name": "100k", "seed": 29, "phase": "archived",
+      "checkpoint": "results/success_progress/training/seed29/final.zip",
+      "variants": ["36_24", "40_24"]
+    },
+    {
+      "name": "150k", "seed": 47, "phase": "archived",
+      "checkpoint": "results/success_90/training/seed47/final.zip",
+      "variants": ["36_24", "40_24"]
+    },
+    {
+      "name": "170k_ood", "seed": 47, "phase": "intermediate",
+      "run_checkpoint": "training/seed47_ood/checkpoint_170000.zip",
+      "variants": ["36_24", "40_24", "42_26"]
+    },
+    {
+      "name": "190k_ood", "seed": 47, "phase": "continued",
+      "run_checkpoint": "training/seed47_ood/final.zip",
+      "variants": ["36_24", "40_24", "42_26", "38_25_settle10"]
+    }
+  ],
+  "references": {
+    "peak_reference": ["150k_44_settle08", "100k_36_24", "150k_36_24"],
+    "previous_high_success": ["150k_44_settle08", "50k_original", "150k_36_24"]
+  }
+}

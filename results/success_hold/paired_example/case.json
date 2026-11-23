@@ -1,0 +1,18 @@
+{
+  "seed": 162136,
+  "training_seed": 47,
+  "profile": "ood",
+  "guard_step": 34,
+  "results": {
+    "peak_reference": {
+      "success": false,
+      "steps": 60,
+      "final_error_cm": 3.3423252403736115
+    },
+    "peak_matched": {
+      "success": true,
+      "steps": 60,
+      "final_error_cm": 2.496025152504444
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "successes": 13,
+  "safety_stops": 0,
+  "max_peak_force_n": 51.83860530585514,
+  "episodes": 26,
+  "success_pct": 50.0,
+  "mean_peak_force_n": 38.05064168123262,
+  "p95_peak_force_n": 50.87241082241429,
+  "safety_pct": 0.0,
+  "penetration_pct": 0.0,
+  "finger_collision_pct": 0.0,
+  "mean_final_error_cm": 3.009469474021059,
+  "contact_pct": 100.0,
+  "p95_contact_tcp_speed_mps": 0.18747988405759347,
+  "within_1cm_pct": 15.384615384615385,
+  "within_2cm_pct": 30.76923076923077,
+  "p95_final_error_cm": 5.164733715355396
+}

@@ -1,0 +1,23 @@
+arm,profile,safety_reason,collision_pair,depth_pair,episodes
+control,friction_ood,penetration,,hand/pusher + cube/cube,3
+control,friction_ood,robot_collision,left_finger/geom73 + right_finger/geom82,left_finger/geom71 + cube/cube,2
+control,friction_ood,robot_collision,left_finger/geom74 + right_finger/geom81,left_finger/geom71 + cube/cube,1
+control,friction_ood,robot_collision,left_finger/geom76 + right_finger/geom83,left_finger/geom71 + cube/cube,1
+control,ood,penetration,,hand/pusher + cube/cube,2
+control,ood,robot_collision,left_finger/geom73 + right_finger/geom82,left_finger/geom73 + right_finger/geom82,8
+control,ood,robot_collision,left_finger/geom74 + right_finger/geom81,left_finger/geom74 + right_finger/geom81,3
+force_penalty,friction_ood,penetration,,hand/pusher + cube/cube,11
+force_penalty,friction_ood,robot_collision,left_finger/geom73 + right_finger/geom82,left_finger/geom73 + right_finger/geom82,5
+force_penalty,friction_ood,robot_collision,left_finger/geom75 + right_finger/geom84,left_finger/geom75 + right_finger/geom84,2
+force_penalty,nominal,penetration,,hand/pusher + cube/cube,12
+force_penalty,ood,penetration,,hand/pusher + cube/cube,10
+force_penalty,ood,robot_collision,left_finger/geom73 + right_finger/geom82,left_finger/geom71 + cube/cube,1
+force_penalty,ood,robot_collision,left_finger/geom73 + right_finger/geom82,left_finger/geom73 + right_finger/geom82,15
+force_penalty,ood,robot_collision,left_finger/geom74 + right_finger/geom81,hand/pusher + cube/cube,1
+force_penalty,ood,robot_collision,left_finger/geom74 + right_finger/geom81,left_finger/geom74 + right_finger/geom81,2
+force_penalty,ood,robot_collision,left_finger/geom76 + right_finger/geom83,left_finger/geom76 + right_finger/geom83,1
+force_penalty,size_ood,penetration,,hand/pusher + cube/cube,8
+speed_limit,friction_ood,penetration,,hand/pusher + cube/cube,1
+speed_limit,ood,penetration,,hand/pusher + cube/cube,1
+speed_limit,ood,robot_collision,left_finger/geom73 + right_finger/geom82,hand/pusher + cube/cube,1
+speed_limit,size_ood,robot_collision,left_finger/geom74 + right_finger/geom81,hand/pusher + cube/cube,1

@@ -1,0 +1,49 @@
+{
+  "profiles": [
+    "nominal",
+    "size_ood",
+    "friction_ood",
+    "ood"
+  ],
+  "eval_seed": 151000,
+  "episodes": 128,
+  "baseline": "baseline_100k",
+  "models": [
+    {
+      "arm": "baseline_100k",
+      "seed": 11,
+      "checkpoint": "results/success_progress/training/seed11/final.zip",
+      "config": "results/success_progress/training/seed11/config.json"
+    },
+    {
+      "arm": "baseline_100k",
+      "seed": 29,
+      "checkpoint": "results/success_progress/training/seed29/final.zip",
+      "config": "results/success_progress/training/seed29/config.json"
+    },
+    {
+      "arm": "baseline_100k",
+      "seed": 47,
+      "checkpoint": "results/success_progress/training/seed47/final.zip",
+      "config": "results/success_progress/training/seed47/config.json"
+    },
+    {
+      "arm": "peak_conservative",
+      "seed": 11,
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "config": "results/success_90/development/configs/150k_free44_settle08/seed11.json"
+    },
+    {
+      "arm": "peak_conservative",
+      "seed": 29,
+      "checkpoint": "results/success_progress/training/seed29/final.zip",
+      "config": "results/success_90/development/configs/100k_free36_contact24/seed29.json"
+    },
+    {
+      "arm": "peak_conservative",
+      "seed": 47,
+      "checkpoint": "results/success_90/training/seed47/final.zip",
+      "config": "results/success_90/development/configs/150k_free36_contact24/seed47.json"
+    }
+  ]
+}

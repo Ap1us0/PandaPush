@@ -1,0 +1,71 @@
+{
+  "current": {
+    "all": {
+      "options": [
+        "50k_reference"
+      ],
+      "successes": 189,
+      "episodes": 192,
+      "success_pct": 98.4375,
+      "safety_stops": 0,
+      "mean_peak_force_n": 19.975932086184365,
+      "p95_peak_force_n": 45.490914739325824,
+      "max_peak_force_n": 60.27798773875965,
+      "mean_final_error_cm": 1.7926962954030994,
+      "within_1cm_pct": 9.375,
+      "within_2cm_pct": 64.0625,
+      "p95_final_error_cm": 2.6819687150418754
+    },
+    "ood": {
+      "options": [
+        "50k_reference"
+      ],
+      "successes": 134,
+      "episodes": 144,
+      "success_pct": 93.05555555555556,
+      "safety_stops": 0,
+      "mean_peak_force_n": 41.65793198631121,
+      "p95_peak_force_n": 51.784421965023235,
+      "max_peak_force_n": 60.27798773875965,
+      "mean_final_error_cm": 2.0422899358284967,
+      "within_1cm_pct": 6.25,
+      "within_2cm_pct": 47.91666666666667,
+      "p95_final_error_cm": 3.267451114952564
+    }
+  },
+  "seed29_tuned": {
+    "all": {
+      "options": [
+        "70k_layout_ood_medium"
+      ],
+      "successes": 185,
+      "episodes": 192,
+      "success_pct": 96.35416666666667,
+      "safety_stops": 0,
+      "mean_peak_force_n": 19.123781822693637,
+      "p95_peak_force_n": 44.782332189038065,
+      "max_peak_force_n": 60.02057328253466,
+      "mean_final_error_cm": 1.893586512596812,
+      "within_1cm_pct": 14.0625,
+      "within_2cm_pct": 72.91666666666666,
+      "p95_final_error_cm": 2.779090460389851
+    },
+    "ood": {
+      "options": [
+        "70k_layout_ood_medium"
+      ],
+      "successes": 135,
+      "episodes": 144,
+      "success_pct": 93.75,
+      "safety_stops": 0,
+      "mean_peak_force_n": 40.15667410024053,
+      "p95_peak_force_n": 48.9818321338884,
+      "max_peak_force_n": 60.02057328253466,
+      "mean_final_error_cm": 1.775645913827854,
+      "within_1cm_pct": 20.833333333333336,
+      "within_2cm_pct": 63.888888888888886,
+      "p95_final_error_cm": 3.4049254655838004
+    }
+  },
+  "development_metrics_seed": 29
+}

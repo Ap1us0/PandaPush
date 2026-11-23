@@ -1,0 +1,6 @@
+policy,profile,success_pct,final_error_cm,ineffective_contact_pct,cube_path_cm,tcp_path_cm,mean_success_step,episodes,summary
+Dense SAC / 50k / nominal train / seed 11,nominal,96.0,1.20386101747863,24.52253628724217,12.924157853871488,29.93927630272159,12.666666666666666,100,results\test_50k\sac_dense_seed11\summary.json
+Dense SAC / 50k / nominal train / seed 11,idr,95.0,1.0843888234812766,30.989956958393112,12.873565942963008,28.87002670404898,12.863157894736842,100,results\generalization\seed11_idr\summary.json
+Dense SAC / 50k / nominal train / seed 11,ood,74.0,2.689441518392414,30.518977536793184,12.2040145756747,29.048983393993012,13.513513513513514,100,results\generalization\seed11_ood\summary.json
+Dense SAC / 50k / nominal train / seed 11,heavy,97.0,1.1977657372044632,27.959331880900507,13.045740859297805,29.67910996805768,12.907216494845361,100,results\generalization\seed11_heavy\summary.json
+Dense SAC / 50k / nominal train / seed 11,slick,94.0,1.2359176331665367,30.522765598650924,12.849971572163973,28.334786593722818,12.574468085106384,100,results\generalization\seed11_slick\summary.json

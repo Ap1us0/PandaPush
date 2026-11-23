@@ -1,0 +1,25 @@
+<mujoco model="PandaPush">
+  <include file="scene.xml"/>
+  <option timestep="0.002" cone="elliptic"/>
+  <visual><global offwidth="960" offheight="540"/></visual>
+  <worldbody>
+    <geom name="table" type="box" pos="0.546 0 0.216" size="0.225 0.26 0.024"
+          friction="0.6 0.005 0.0001" priority="1" condim="4" rgba="0.54 0.56 0.59 1"
+          solref="0.005 1" solimp="0.94 0.99 0.001"/>
+    <geom name="table_post" type="box" pos="0.59 0 0.096" size="0.13 0.13 0.096"
+          contype="0" conaffinity="0" rgba="0.19 0.22 0.25 1"/>
+    <site name="goal" type="cylinder" pos="0.63 0 0.2407" size="0.03 0.0007"
+          rgba="0.1 0.85 0.56 0.8"/>
+    <body name="cube" pos="0.505 0 0.264">
+      <freejoint name="cube_free"/>
+      <geom name="cube" type="box" size="0.024 0.024 0.024" mass="0.09"
+            friction="0.45 0.004 0.0001" condim="4" rgba="0.96 0.30 0.08 1"/>
+    </body>
+  </worldbody>
+  <contact>
+    <pair name="table_cube" geom1="table" geom2="cube" condim="4"
+          friction="0.5196 0.5196 0.004 0.0001 0.0001"
+          solref="0.005 1" solimp="0.94 0.99 0.001"/>
+  </contact>
+</mujoco>
+

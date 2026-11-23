@@ -1,0 +1,48 @@
+{
+  "profiles": [
+    "nominal",
+    "size_ood",
+    "friction_ood",
+    "ood"
+  ],
+  "eval_seed": 114000,
+  "episodes": 100,
+  "models": [
+    {
+      "arm": "speed_50k",
+      "seed": 11,
+      "checkpoint": "results/contact_safety/training/speed_limit/seed11/final.zip",
+      "config": "results/contact_safety/training/speed_limit/seed11/config.json"
+    },
+    {
+      "arm": "speed_50k",
+      "seed": 29,
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "config": "results/contact_safety/training/speed_limit/seed29/config.json"
+    },
+    {
+      "arm": "speed_50k",
+      "seed": 47,
+      "checkpoint": "results/contact_safety/training/speed_limit/seed47/final.zip",
+      "config": "results/contact_safety/training/speed_limit/seed47/config.json"
+    },
+    {
+      "arm": "speed_100k",
+      "seed": 11,
+      "checkpoint": "results/success_progress/training/seed11/final.zip",
+      "config": "results/success_progress/training/seed11/config.json"
+    },
+    {
+      "arm": "speed_100k",
+      "seed": 29,
+      "checkpoint": "results/success_progress/training/seed29/final.zip",
+      "config": "results/success_progress/training/seed29/config.json"
+    },
+    {
+      "arm": "speed_100k",
+      "seed": 47,
+      "checkpoint": "results/success_progress/training/seed47/final.zip",
+      "config": "results/success_progress/training/seed47/config.json"
+    }
+  ]
+}

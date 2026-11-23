@@ -1,0 +1,27 @@
+profile,safety_reason,collision_pair,depth_pair,episodes
+combined_fixed,penetration,,hand/pusher + cube/cube,7
+combined_fixed,robot_collision,left_finger/geom73 + right_finger/geom82,left_finger/geom73 + right_finger/geom82,5
+combined_fixed,robot_collision,left_finger/geom74 + right_finger/geom81,left_finger/geom74 + right_finger/geom81,2
+combined_fixed,robot_collision,left_finger/geom75 + right_finger/geom84,left_finger/geom75 + right_finger/geom84,2
+cube_mu_068,penetration,,hand/pusher + cube/cube,4
+cube_mu_077,penetration,,hand/pusher + cube/cube,7
+cube_mu_085,penetration,,hand/pusher + cube/cube,5
+cube_mu_085,robot_collision,left_finger/geom76 + right_finger/geom83,left_finger/geom76 + right_finger/geom83,1
+high_friction,penetration,,hand/pusher + cube/cube,10
+mass_170g,penetration,,hand/pusher + cube/cube,4
+nominal,penetration,,hand/pusher + cube/cube,4
+ood,penetration,,hand/pusher + cube/cube,5
+ood,robot_collision,left_finger/geom73 + right_finger/geom82,left_finger/geom73 + right_finger/geom82,9
+ood,robot_collision,left_finger/geom74 + right_finger/geom81,left_finger/geom74 + right_finger/geom81,1
+ood,robot_collision,left_finger/geom75 + right_finger/geom84,hand/pusher + cube/cube,1
+ood,robot_collision,left_finger/geom75 + right_finger/geom84,left_finger/geom75 + right_finger/geom84,1
+ood,robot_collision,left_finger/geom76 + right_finger/geom83,left_finger/geom76 + right_finger/geom83,1
+size_54mm,penetration,,hand/pusher + cube/cube,8
+size_54mm,robot_collision,left_finger/geom73 + right_finger/geom82,left_finger/geom73 + right_finger/geom82,1
+size_57mm,penetration,,hand/pusher + cube/cube,10
+size_60mm,penetration,,hand/pusher + cube/cube,10
+size_60mm,robot_collision,left_finger/geom73 + right_finger/geom82,left_finger/geom73 + right_finger/geom82,2
+table_mu_083,penetration,,hand/pusher + cube/cube,5
+table_mu_092,penetration,,hand/pusher + cube/cube,5
+table_mu_092,robot_collision,left_finger/geom74 + right_finger/geom81,left_finger/geom74 + right_finger/geom81,1
+table_mu_100,penetration,,hand/pusher + cube/cube,3

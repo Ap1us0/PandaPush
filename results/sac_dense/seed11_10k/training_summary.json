@@ -1,0 +1,10 @@
+{
+  "start_step": 0,
+  "end_step": 10000,
+  "trained_steps": 10000,
+  "wall_s": 236.28739549999955,
+  "completed_episodes": 170,
+  "mean_training_return": -26.47714795882353,
+  "device": "cpu",
+  "torch": "2.7.1+cpu"
+}

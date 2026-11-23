@@ -1,0 +1,37 @@
+{
+  "arms": [
+    "baseline",
+    "gated_before_contact"
+  ],
+  "batches": {
+    "gated_a": {
+      "first_seed": 177000,
+      "episodes": 128
+    },
+    "gated_b": {
+      "first_seed": 178000,
+      "episodes": 128
+    }
+  },
+  "steering": {
+    "offset_m": 0.023,
+    "predicted_offset_m": 0.018,
+    "surface_gap_m": 0.008,
+    "min_forward_m": 0.001,
+    "correction_cap_m": 0.0025,
+    "gain": 0.35,
+    "max_steps": 2
+  },
+  "code_sha256": "931c7e7ea8044d20d371d756baa2b56846a56561f0af94efa220d13c0c55c9f2",
+  "strict_success_target_pct": 95,
+  "training_steps": 0,
+  "pair_guardrails": [
+    "mean_abs_terminal_lateral_cm",
+    "within_1cm_pct",
+    "within_2cm_pct",
+    "mean_peak_force_n",
+    "p95_peak_force_n",
+    "max_peak_force_n",
+    "safety_stops"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "profiles": ["nominal", "size_ood", "friction_ood", "ood"],
+  "development": {"eval_seed": 146000, "episodes": 48},
+  "heldout": {"eval_seed": 149000, "episodes": 160},
+  "variants": {
+    "original": {},
+    "contact24": {"contact_speed_mps": 0.24},
+    "free44": {"free_speed_mps": 0.44},
+    "free36_contact24": {"free_speed_mps": 0.36, "contact_speed_mps": 0.24},
+    "free44_settle08": {"free_speed_mps": 0.44, "settle_speed_mps": 0.08}
+  },
+  "seeds": [11, 29, 47],
+  "force_mean_margin_n": 0.6,
+  "force_p95_margin_n": 0.6,
+  "lower_force_mean_margin_n": 1.8,
+  "lower_force_p95_margin_n": 2.0
+}

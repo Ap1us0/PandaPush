@@ -1,0 +1,7 @@
+policy,profile,success_pct,final_error_cm,ineffective_contact_pct,cube_path_cm,tcp_path_cm,mean_success_step,episodes,summary
+Dense SAC / 10k / nominal train / seed 11,nominal,65.0,3.353809077758342,46.35220125786164,10.335190327732755,22.919613344928543,14.953846153846154,100,results\test_10k\sac_dense_seed11\summary.json
+Dense SAC / 10k / idr train / seed 11,nominal,45.0,3.8316085697151716,31.31381892443839,10.307094729377257,26.114073657630442,12.955555555555556,100,results\generalization\idr_training\idr_trained_nominal\summary.json
+Dense SAC / 10k / idr train / seed 11,idr,53.0,3.4208415979519486,29.946524064171122,10.83570860624547,26.90680098363652,13.264150943396226,100,results\generalization\idr_training\idr_trained_idr\summary.json
+Dense SAC / 10k / nominal train / seed 11,idr,57.99999999999999,3.360507999546826,49.85020970641102,10.21973362123192,22.84618526303605,15.189655172413794,100,results\generalization\idr_training\nominal_trained_idr\summary.json
+Dense SAC / 10k / idr train / seed 11,ood,59.0,3.648060961393639,33.21956769055745,11.165752145427554,26.04891602330578,14.135593220338983,100,results\generalization\idr_training\idr_trained_ood\summary.json
+Dense SAC / 10k / nominal train / seed 11,ood,44.0,4.644090928602964,54.17130144605117,9.14338870533472,20.17694718664458,15.340909090909092,100,results\generalization\idr_training\nominal_trained_ood\summary.json

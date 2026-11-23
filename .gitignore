@@ -1,0 +1,15 @@
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.env
+.env.*
+.vscode/
+.idea/
+repro/
+results/**/replay_buffer.pkl
+results/**/*_buffer.pkl
+results/**/events.out.tfevents.*
+Thumbs.db
+.DS_Store

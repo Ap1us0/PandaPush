@@ -1,0 +1,51 @@
+{
+  "eval_seed": 172000,
+  "episodes": 192,
+  "success_target_pct": 95,
+  "precision_metrics": true,
+  "profiles": [
+    "nominal",
+    "size_ood",
+    "friction_ood",
+    "ood"
+  ],
+  "baseline": "current",
+  "models": [
+    {
+      "arm": "current",
+      "seed": 11,
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "config": "results/success_precision/development/configs/150k_settle11_08/seed11.json"
+    },
+    {
+      "arm": "current",
+      "seed": 29,
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "config": "results/success_precision/development/configs/50k_project12/seed29.json"
+    },
+    {
+      "arm": "current",
+      "seed": 47,
+      "checkpoint": "results/success_95/training/seed47_ood/checkpoint_170000.zip",
+      "config": "results/success_precision/development/configs/170k_ood_project_lower47/seed47.json"
+    },
+    {
+      "arm": "seed29_tuned",
+      "seed": 11,
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "config": "results/success_precision/development/configs/150k_settle11_08/seed11.json"
+    },
+    {
+      "arm": "seed29_tuned",
+      "seed": 29,
+      "checkpoint": "results/success_seed29/training/seed29_layout_ood/final.zip",
+      "config": "results/success_seed29/development/configs/70k_layout_ood_medium/seed29.json"
+    },
+    {
+      "arm": "seed29_tuned",
+      "seed": 47,
+      "checkpoint": "results/success_95/training/seed47_ood/checkpoint_170000.zip",
+      "config": "results/success_precision/development/configs/170k_ood_project_lower47/seed47.json"
+    }
+  ]
+}

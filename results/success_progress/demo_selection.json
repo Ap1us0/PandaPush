@@ -1,0 +1,30 @@
+{
+  "development_seed": 94000,
+  "episodes": 32,
+  "selected": {
+    "seed": 29,
+    "checkpoint": "results/success_progress/training/seed29/final.zip",
+    "development_success_rate": 0.96875,
+    "development_mean_peak_force_n": 28.941295072460335
+  },
+  "candidates": [
+    {
+      "seed": 11,
+      "checkpoint": "results/success_progress/training/seed11/final.zip",
+      "development_success_rate": 0.875,
+      "development_mean_peak_force_n": 28.125501005032476
+    },
+    {
+      "seed": 29,
+      "checkpoint": "results/success_progress/training/seed29/final.zip",
+      "development_success_rate": 0.96875,
+      "development_mean_peak_force_n": 28.941295072460335
+    },
+    {
+      "seed": 47,
+      "checkpoint": "results/success_progress/training/seed47/final.zip",
+      "development_success_rate": 0.65625,
+      "development_mean_peak_force_n": 29.535411717034815
+    }
+  ]
+}

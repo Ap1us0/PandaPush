@@ -1,0 +1,41 @@
+{
+  "profiles": ["nominal", "size_ood", "friction_ood", "ood"],
+  "development": {"eval_seed": 161000, "episodes": 96, "profiles": ["ood"]},
+  "heldout": {"eval_seed": 162000, "episodes": 192, "success_target_pct": 95},
+  "seeds": [11, 29, 47],
+  "variants": {
+    "peak11": {"free_speed_mps": 0.38, "contact_speed_mps": 0.25, "settle_speed_mps": 0.10},
+    "high11": {"free_speed_mps": 0.44, "settle_speed_mps": 0.08},
+    "peak11_hold3": {"free_speed_mps": 0.38, "contact_speed_mps": 0.25, "settle_speed_mps": 0.10, "release_hold_steps": 3},
+    "speed40_24": {"free_speed_mps": 0.40, "contact_speed_mps": 0.24},
+    "speed42_26": {"free_speed_mps": 0.42, "contact_speed_mps": 0.26},
+    "hold3_40_24": {"free_speed_mps": 0.40, "contact_speed_mps": 0.24, "release_hold_steps": 3},
+    "hold3_41_25": {"free_speed_mps": 0.41, "contact_speed_mps": 0.25, "release_hold_steps": 3},
+    "hold3_42_26": {"free_speed_mps": 0.42, "contact_speed_mps": 0.26, "release_hold_steps": 3},
+    "hold2_42_26": {"free_speed_mps": 0.42, "contact_speed_mps": 0.26, "release_hold_steps": 2},
+    "retreat3_42_26": {"free_speed_mps": 0.42, "contact_speed_mps": 0.26, "release_hold_steps": 3, "release_clearance_m": 0.012},
+    "retreat3_40_24": {"free_speed_mps": 0.40, "contact_speed_mps": 0.24, "release_hold_steps": 3, "release_clearance_m": 0.012},
+    "hold3_38_24": {"free_speed_mps": 0.38, "contact_speed_mps": 0.24, "release_hold_steps": 3}
+  },
+  "checkpoints": [
+    {
+      "name": "150k", "seed": 11, "phase": "archived",
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "variants": ["peak11", "high11", "peak11_hold3"]
+    },
+    {
+      "name": "50k", "seed": 29, "phase": "archived",
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "variants": ["speed40_24", "speed42_26", "hold3_40_24", "hold3_41_25", "hold3_42_26", "retreat3_42_26", "retreat3_40_24"]
+    },
+    {
+      "name": "170k_ood", "seed": 47, "phase": "archived",
+      "checkpoint": "results/success_95/training/seed47_ood/checkpoint_170000.zip",
+      "variants": ["speed42_26", "hold3_42_26", "hold2_42_26", "retreat3_42_26", "hold3_40_24", "retreat3_40_24", "hold3_38_24"]
+    }
+  ],
+  "references": {
+    "peak_reference": ["150k_peak11", "50k_speed40_24", "170k_ood_speed42_26"],
+    "previous_high_success": ["150k_high11", "50k_speed42_26", "170k_ood_speed42_26"]
+  }
+}

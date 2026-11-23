@@ -1,0 +1,271 @@
+{
+  "profiles": [
+    "nominal",
+    "size_ood",
+    "friction_ood",
+    "ood"
+  ],
+  "development": {
+    "eval_seed": 165000,
+    "episodes": 48
+  },
+  "heldout": {
+    "eval_seed": 166000,
+    "episodes": 192,
+    "success_target_pct": 95,
+    "precision_metrics": true
+  },
+  "seeds": [
+    11,
+    29,
+    47
+  ],
+  "variants": {
+    "reference": {},
+    "slower11": {
+      "free_speed_mps": 0.36,
+      "contact_speed_mps": 0.24
+    },
+    "center08": {
+      "center_speed_mps": 0.08,
+      "center_radius_m": 0.009,
+      "center_steps": 16
+    },
+    "center12": {
+      "center_speed_mps": 0.12,
+      "center_radius_m": 0.009,
+      "center_steps": 16
+    },
+    "aligned08": {
+      "center_speed_mps": 0.08,
+      "center_radius_m": 0.009,
+      "center_steps": 16,
+      "center_min_alignment": 0.3
+    },
+    "aligned12": {
+      "center_speed_mps": 0.12,
+      "center_radius_m": 0.009,
+      "center_steps": 16,
+      "center_min_alignment": 0.3
+    },
+    "lower29": {
+      "center_speed_mps": 0.1,
+      "center_radius_m": 0.009,
+      "center_steps": 16,
+      "center_min_alignment": 0.2,
+      "free_speed_mps": 0.4,
+      "contact_speed_mps": 0.24
+    },
+    "lower47": {
+      "center_speed_mps": 0.1,
+      "center_radius_m": 0.009,
+      "center_steps": 16,
+      "center_min_alignment": 0.2,
+      "free_speed_mps": 0.36,
+      "contact_speed_mps": 0.23
+    },
+    "project09": {
+      "center_speed_mps": 0.09,
+      "center_radius_m": 0.009,
+      "center_steps": 16,
+      "center_min_alignment": 0.6,
+      "center_goal_projection": true
+    },
+    "project12": {
+      "center_speed_mps": 0.12,
+      "center_radius_m": 0.009,
+      "center_steps": 16,
+      "center_min_alignment": 0.6,
+      "center_goal_projection": true
+    },
+    "project_lower29": {
+      "center_speed_mps": 0.09,
+      "center_radius_m": 0.009,
+      "center_steps": 16,
+      "center_min_alignment": 0.6,
+      "center_goal_projection": true,
+      "free_speed_mps": 0.4,
+      "contact_speed_mps": 0.24
+    },
+    "project_lower47": {
+      "center_speed_mps": 0.09,
+      "center_radius_m": 0.009,
+      "center_steps": 16,
+      "center_min_alignment": 0.6,
+      "center_goal_projection": true,
+      "free_speed_mps": 0.36,
+      "contact_speed_mps": 0.23
+    },
+    "force11_24": {
+      "contact_speed_mps": 0.24
+    },
+    "force11_23": {
+      "contact_speed_mps": 0.23
+    },
+    "settle11_08": {
+      "settle_speed_mps": 0.08
+    },
+    "project29_brake": {
+      "center_speed_mps": 0.09,
+      "center_radius_m": 0.009,
+      "center_steps": 16,
+      "center_min_alignment": 0.6,
+      "center_goal_projection": true,
+      "contact_speed_mps": 0.245
+    },
+    "project29_approach": {
+      "center_speed_mps": 0.09,
+      "center_radius_m": 0.009,
+      "center_steps": 16,
+      "center_min_alignment": 0.6,
+      "center_goal_projection": true,
+      "free_speed_mps": 0.42,
+      "contact_speed_mps": 0.24
+    },
+    "project47_brake": {
+      "center_speed_mps": 0.09,
+      "center_radius_m": 0.009,
+      "center_steps": 16,
+      "center_min_alignment": 0.6,
+      "center_goal_projection": true,
+      "contact_speed_mps": 0.235
+    }
+  },
+  "checkpoints": [
+    {
+      "name": "150k",
+      "seed": 11,
+      "phase": "archived",
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "base_overrides": {
+        "free_speed_mps": 0.38,
+        "contact_speed_mps": 0.25,
+        "settle_speed_mps": 0.1
+      },
+      "variants": [
+        "reference",
+        "slower11"
+      ]
+    },
+    {
+      "name": "50k",
+      "seed": 29,
+      "phase": "archived",
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "base_overrides": {
+        "free_speed_mps": 0.41,
+        "contact_speed_mps": 0.25,
+        "release_hold_steps": 3
+      },
+      "variants": [
+        "reference",
+        "center08",
+        "center12",
+        "aligned08",
+        "aligned12",
+        "lower29"
+      ]
+    },
+    {
+      "name": "170k_ood",
+      "seed": 47,
+      "phase": "archived",
+      "checkpoint": "results/success_95/training/seed47_ood/checkpoint_170000.zip",
+      "base_overrides": {
+        "free_speed_mps": 0.38,
+        "contact_speed_mps": 0.24,
+        "release_hold_steps": 3
+      },
+      "variants": [
+        "reference",
+        "center08",
+        "center12",
+        "aligned08",
+        "aligned12",
+        "lower47"
+      ]
+    },
+    {
+      "name": "50k",
+      "seed": 29,
+      "phase": "focused",
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "base_overrides": {
+        "free_speed_mps": 0.41,
+        "contact_speed_mps": 0.25,
+        "release_hold_steps": 3
+      },
+      "variants": [
+        "project09",
+        "project12",
+        "project_lower29"
+      ]
+    },
+    {
+      "name": "170k_ood",
+      "seed": 47,
+      "phase": "focused",
+      "checkpoint": "results/success_95/training/seed47_ood/checkpoint_170000.zip",
+      "base_overrides": {
+        "free_speed_mps": 0.38,
+        "contact_speed_mps": 0.24,
+        "release_hold_steps": 3
+      },
+      "variants": [
+        "project09",
+        "project12",
+        "project_lower47"
+      ]
+    },
+    {
+      "name": "150k",
+      "seed": 11,
+      "phase": "intermediate",
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "base_overrides": {
+        "free_speed_mps": 0.38,
+        "contact_speed_mps": 0.25,
+        "settle_speed_mps": 0.1
+      },
+      "variants": [
+        "force11_24",
+        "force11_23",
+        "settle11_08"
+      ]
+    },
+    {
+      "name": "50k",
+      "seed": 29,
+      "phase": "intermediate",
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "base_overrides": {
+        "free_speed_mps": 0.41,
+        "contact_speed_mps": 0.25,
+        "release_hold_steps": 3
+      },
+      "variants": [
+        "project29_brake",
+        "project29_approach"
+      ]
+    },
+    {
+      "name": "170k_ood",
+      "seed": 47,
+      "phase": "intermediate",
+      "checkpoint": "results/success_95/training/seed47_ood/checkpoint_170000.zip",
+      "base_overrides": {
+        "free_speed_mps": 0.38,
+        "contact_speed_mps": 0.24,
+        "release_hold_steps": 3
+      },
+      "variants": [
+        "project47_brake"
+      ]
+    }
+  ],
+  "precision_reference": [
+    "150k_reference",
+    "50k_reference",
+    "170k_ood_reference"
+  ]
+}

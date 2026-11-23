@@ -1,0 +1,69 @@
+{
+  "eval_seed": 166000,
+  "episodes": 192,
+  "success_target_pct": 95,
+  "precision_metrics": true,
+  "profiles": [
+    "nominal",
+    "size_ood",
+    "friction_ood",
+    "ood"
+  ],
+  "baseline": "current",
+  "models": [
+    {
+      "arm": "current",
+      "seed": 11,
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "config": "results/success_precision/development/configs/150k_reference/seed11.json"
+    },
+    {
+      "arm": "current",
+      "seed": 29,
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "config": "results/success_precision/development/configs/50k_reference/seed29.json"
+    },
+    {
+      "arm": "current",
+      "seed": 47,
+      "checkpoint": "results/success_95/training/seed47_ood/checkpoint_170000.zip",
+      "config": "results/success_precision/development/configs/170k_ood_reference/seed47.json"
+    },
+    {
+      "arm": "centered",
+      "seed": 11,
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "config": "results/success_precision/development/configs/150k_settle11_08/seed11.json"
+    },
+    {
+      "arm": "centered",
+      "seed": 29,
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "config": "results/success_precision/development/configs/50k_project12/seed29.json"
+    },
+    {
+      "arm": "centered",
+      "seed": 47,
+      "checkpoint": "results/success_95/training/seed47_ood/checkpoint_170000.zip",
+      "config": "results/success_precision/development/configs/170k_ood_project12/seed47.json"
+    },
+    {
+      "arm": "lower_force_centering",
+      "seed": 11,
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "config": "results/success_precision/development/configs/150k_settle11_08/seed11.json"
+    },
+    {
+      "arm": "lower_force_centering",
+      "seed": 29,
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "config": "results/success_precision/development/configs/50k_project12/seed29.json"
+    },
+    {
+      "arm": "lower_force_centering",
+      "seed": 47,
+      "checkpoint": "results/success_95/training/seed47_ood/checkpoint_170000.zip",
+      "config": "results/success_precision/development/configs/170k_ood_reference/seed47.json"
+    }
+  ]
+}

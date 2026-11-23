@@ -1,0 +1,7 @@
+arm,direction,episodes,current_wins,candidate_wins,recovered,regressed
+seed29_tuned,all,192,167,179,20,8
+seed29_tuned,negative_y,101,81,93,18,6
+seed29_tuned,positive_y,91,86,86,2,2
+seed29_force_margin,all,192,167,176,20,11
+seed29_force_margin,negative_y,101,81,92,18,7
+seed29_force_margin,positive_y,91,86,84,2,4

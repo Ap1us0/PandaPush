@@ -1,0 +1,5 @@
+{
+  "episodes": 768,
+  "checkpoint_steps": 90000,
+  "episodes_sha256": "60cbc6bcf450d1ee92cd686cb8c6731f3b7eaf92f80b59f0d2bdd6c68b2ac5b7"
+}

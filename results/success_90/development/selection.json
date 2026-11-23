@@ -1,0 +1,55 @@
+{
+  "baseline_100k": {
+    "options": [
+      "100k_original",
+      "100k_original",
+      "100k_original"
+    ],
+    "successes": 477,
+    "episodes": 576,
+    "success_pct": 82.8125,
+    "safety_stops": 1,
+    "mean_peak_force_n": 24.720855221198345,
+    "p95_peak_force_n": 56.70675922426517
+  },
+  "tuned": {
+    "options": [
+      "150k_free44_settle08",
+      "50k_original",
+      "150k_free44"
+    ],
+    "successes": 554,
+    "episodes": 576,
+    "success_pct": 96.18055555555556,
+    "safety_stops": 0,
+    "mean_peak_force_n": 24.11074264233375,
+    "p95_peak_force_n": 53.75489608782772
+  },
+  "lower_force": {
+    "options": [
+      "150k_free44_settle08",
+      "50k_original",
+      "150k_free36_contact24"
+    ],
+    "successes": 553,
+    "episodes": 576,
+    "success_pct": 96.00694444444444,
+    "safety_stops": 0,
+    "mean_peak_force_n": 22.835396479381743,
+    "p95_peak_force_n": 50.96958605716278
+  },
+  "primary_margin_applied": true,
+  "best_under_zero_margin": {
+    "options": [
+      "150k_free44_settle08",
+      "50k_original",
+      "150k_free44"
+    ],
+    "successes": 554,
+    "episodes": 576,
+    "success_pct": 96.18055555555556,
+    "safety_stops": 0,
+    "mean_peak_force_n": 24.11074264233375,
+    "p95_peak_force_n": 53.75489608782772
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "eval_seed": 149000,
+  "episodes": 160,
+  "profiles": [
+    "nominal",
+    "size_ood",
+    "friction_ood",
+    "ood"
+  ],
+  "baseline": "baseline_100k",
+  "models": [
+    {
+      "arm": "baseline_100k",
+      "seed": 11,
+      "checkpoint": "results/success_progress/training/seed11/final.zip",
+      "config": "results/success_progress/training/seed11/config.json"
+    },
+    {
+      "arm": "baseline_100k",
+      "seed": 29,
+      "checkpoint": "results/success_progress/training/seed29/final.zip",
+      "config": "results/success_progress/training/seed29/config.json"
+    },
+    {
+      "arm": "baseline_100k",
+      "seed": 47,
+      "checkpoint": "results/success_progress/training/seed47/final.zip",
+      "config": "results/success_progress/training/seed47/config.json"
+    },
+    {
+      "arm": "tuned",
+      "seed": 11,
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "config": "results/success_90/development/configs/150k_free44_settle08/seed11.json"
+    },
+    {
+      "arm": "tuned",
+      "seed": 29,
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "config": "results/contact_safety/training/speed_limit/seed29/config.json"
+    },
+    {
+      "arm": "tuned",
+      "seed": 47,
+      "checkpoint": "results/success_90/training/seed47/final.zip",
+      "config": "results/success_90/development/configs/150k_free44/seed47.json"
+    },
+    {
+      "arm": "lower_force",
+      "seed": 11,
+      "checkpoint": "results/success_90/training/seed11/final.zip",
+      "config": "results/success_90/development/configs/150k_free44_settle08/seed11.json"
+    },
+    {
+      "arm": "lower_force",
+      "seed": 29,
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "config": "results/contact_safety/training/speed_limit/seed29/config.json"
+    },
+    {
+      "arm": "lower_force",
+      "seed": 47,
+      "checkpoint": "results/success_90/training/seed47/final.zip",
+      "config": "results/success_90/development/configs/150k_free36_contact24/seed47.json"
+    }
+  ]
+}

@@ -1,0 +1,205 @@
+{
+  "profiles": [
+    "nominal",
+    "size_ood",
+    "friction_ood",
+    "ood"
+  ],
+  "development": {
+    "eval_seed": 174000,
+    "episodes": 64
+  },
+  "heldout": {
+    "eval_seed": 175000,
+    "episodes": 192,
+    "success_target_pct": 95,
+    "precision_metrics": true
+  },
+  "seeds": [
+    29
+  ],
+  "variants": {
+    "reference": {},
+    "approach405": {
+      "free_speed_mps": 0.405
+    },
+    "medium": {
+      "free_speed_mps": 0.4,
+      "contact_speed_mps": 0.24
+    },
+    "slow": {
+      "free_speed_mps": 0.38,
+      "contact_speed_mps": 0.24
+    },
+    "medium_center10": {
+      "free_speed_mps": 0.4,
+      "contact_speed_mps": 0.24,
+      "center_speed_mps": 0.1
+    },
+    "project55": {
+      "approach_projection_radius_m": 0.055
+    },
+    "midway": {
+      "free_speed_mps": 0.39,
+      "contact_speed_mps": 0.235
+    },
+    "medium_project45": {
+      "free_speed_mps": 0.4,
+      "contact_speed_mps": 0.24,
+      "approach_projection_radius_m": 0.045
+    }
+  },
+  "checkpoints": [
+    {
+      "name": "50k",
+      "seed": 29,
+      "phase": "archived",
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "base_overrides": {
+        "free_speed_mps": 0.41,
+        "contact_speed_mps": 0.25,
+        "release_hold_steps": 3,
+        "center_speed_mps": 0.12,
+        "center_radius_m": 0.009,
+        "center_steps": 16,
+        "center_min_alignment": 0.6,
+        "center_goal_projection": true
+      },
+      "variants": [
+        "reference"
+      ]
+    },
+    {
+      "name": "70k_positive",
+      "seed": 29,
+      "phase": "archived",
+      "checkpoint": "results/success_seed29/training/seed29_layout_ood/final.zip",
+      "base_overrides": {
+        "free_speed_mps": 0.41,
+        "contact_speed_mps": 0.25,
+        "release_hold_steps": 3,
+        "center_speed_mps": 0.12,
+        "center_radius_m": 0.009,
+        "center_steps": 16,
+        "center_min_alignment": 0.6,
+        "center_goal_projection": true
+      },
+      "variants": [
+        "medium",
+        "slow",
+        "medium_project45"
+      ]
+    },
+    {
+      "name": "80k_negative",
+      "seed": 29,
+      "phase": "intermediate",
+      "run_checkpoint": "training/seed29_negative/checkpoint_080000.zip",
+      "base_overrides": {
+        "free_speed_mps": 0.41,
+        "contact_speed_mps": 0.25,
+        "release_hold_steps": 3,
+        "center_speed_mps": 0.12,
+        "center_radius_m": 0.009,
+        "center_steps": 16,
+        "center_min_alignment": 0.6,
+        "center_goal_projection": true
+      },
+      "variants": [
+        "reference",
+        "medium",
+        "slow"
+      ]
+    },
+    {
+      "name": "90k_negative",
+      "seed": 29,
+      "phase": "continued",
+      "run_checkpoint": "training/seed29_negative/final.zip",
+      "base_overrides": {
+        "free_speed_mps": 0.41,
+        "contact_speed_mps": 0.25,
+        "release_hold_steps": 3,
+        "center_speed_mps": 0.12,
+        "center_radius_m": 0.009,
+        "center_steps": 16,
+        "center_min_alignment": 0.6,
+        "center_goal_projection": true
+      },
+      "variants": [
+        "reference",
+        "medium",
+        "slow",
+        "midway",
+        "medium_project45"
+      ]
+    },
+    {
+      "name": "50k",
+      "seed": 29,
+      "phase": "approach",
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "base_overrides": {
+        "free_speed_mps": 0.41,
+        "contact_speed_mps": 0.25,
+        "release_hold_steps": 3,
+        "center_speed_mps": 0.12,
+        "center_radius_m": 0.009,
+        "center_steps": 16,
+        "center_min_alignment": 0.6,
+        "center_goal_projection": true
+      },
+      "variants": [
+        "approach405"
+      ]
+    },
+    {
+      "name": "70k_positive",
+      "seed": 29,
+      "phase": "approach",
+      "checkpoint": "results/success_seed29/training/seed29_layout_ood/final.zip",
+      "base_overrides": {
+        "free_speed_mps": 0.41,
+        "contact_speed_mps": 0.25,
+        "release_hold_steps": 3,
+        "center_speed_mps": 0.12,
+        "center_radius_m": 0.009,
+        "center_steps": 16,
+        "center_min_alignment": 0.6,
+        "center_goal_projection": true
+      },
+      "variants": [
+        "project55"
+      ]
+    },
+    {
+      "name": "80k_physics",
+      "seed": 29,
+      "phase": "approach",
+      "checkpoint": "results/success_seed29/training/seed29_ood/final.zip",
+      "base_overrides": {
+        "free_speed_mps": 0.41,
+        "contact_speed_mps": 0.25,
+        "release_hold_steps": 3,
+        "center_speed_mps": 0.12,
+        "center_radius_m": 0.009,
+        "center_steps": 16,
+        "center_min_alignment": 0.6,
+        "center_goal_projection": true
+      },
+      "variants": [
+        "medium_center10"
+      ]
+    }
+  ],
+  "precision_reference": [
+    "50k_reference"
+  ],
+  "focused_seed": {
+    "source_manifest": "results/success_precision/force_confirmation/manifest.json",
+    "source_arm": "guarded_centering",
+    "force_margin_n": 0.5,
+    "confirm_ood": false,
+    "allow_exploratory_validation": true
+  }
+}

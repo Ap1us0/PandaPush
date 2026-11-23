@@ -1,0 +1,8 @@
+* text=auto
+results/** -text
+models/** -text
+panda_push/lateral_ablation.py -text
+panda_push/precontact_alignment.py -text
+*.png binary
+*.mp4 binary
+*.zip binary

@@ -1,0 +1,65 @@
+{
+  "eval_seed": 171500,
+  "episodes": 96,
+  "profiles": [
+    "ood"
+  ],
+  "precision_metrics": true,
+  "baseline": "50k_reference",
+  "models": [
+    {
+      "arm": "50k_reference",
+      "seed": 29,
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "config": "results/success_seed29/development/configs/50k_reference/seed29.json"
+    },
+    {
+      "arm": "80k_ood_slow",
+      "seed": 29,
+      "checkpoint": "results/success_seed29/training/seed29_ood/final.zip",
+      "config": "results/success_seed29/development/configs/80k_ood_slow/seed29.json"
+    },
+    {
+      "arm": "80k_ood_medium",
+      "seed": 29,
+      "checkpoint": "results/success_seed29/training/seed29_ood/final.zip",
+      "config": "results/success_seed29/development/configs/80k_ood_medium/seed29.json"
+    },
+    {
+      "arm": "60k_ood_medium",
+      "seed": 29,
+      "checkpoint": "results/success_seed29/training/seed29_ood/checkpoint_060000.zip",
+      "config": "results/success_seed29/development/configs/60k_ood_medium/seed29.json"
+    },
+    {
+      "arm": "50k_approach42",
+      "seed": 29,
+      "checkpoint": "results/contact_safety/training/speed_limit/seed29/final.zip",
+      "config": "results/success_seed29/development/configs/50k_approach42/seed29.json"
+    },
+    {
+      "arm": "70k_layout_ood_reference",
+      "seed": 29,
+      "checkpoint": "results/success_seed29/training/seed29_layout_ood/final.zip",
+      "config": "results/success_seed29/development/configs/70k_layout_ood_reference/seed29.json"
+    },
+    {
+      "arm": "70k_layout_ood_medium",
+      "seed": 29,
+      "checkpoint": "results/success_seed29/training/seed29_layout_ood/final.zip",
+      "config": "results/success_seed29/development/configs/70k_layout_ood_medium/seed29.json"
+    },
+    {
+      "arm": "70k_layout_ood_slow",
+      "seed": 29,
+      "checkpoint": "results/success_seed29/training/seed29_layout_ood/final.zip",
+      "config": "results/success_seed29/development/configs/70k_layout_ood_slow/seed29.json"
+    },
+    {
+      "arm": "70k_layout_ood_project55",
+      "seed": 29,
+      "checkpoint": "results/success_seed29/training/seed29_layout_ood/final.zip",
+      "config": "results/success_seed29/development/configs/70k_layout_ood_project55/seed29.json"
+    }
+  ]
+}

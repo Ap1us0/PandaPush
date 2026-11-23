@@ -1,0 +1,5 @@
+batch,episodes,baseline_failures,recovered,regressed,paired_abs_lateral_decreasing
+probe,26,13,13,0,23
+align_a,128,7,7,2,92
+align_b,128,9,9,1,87
+pooled,256,16,16,3,179

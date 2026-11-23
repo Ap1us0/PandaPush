@@ -1,0 +1,56 @@
+{
+  "panda_position.py": {
+    "source": "轨迹规划\\src\\panda_position.py",
+    "original_sha256": "357ebb5c425a986d34814b5579ecf7f75e508c6e4952817facc4259c9fb57cec",
+    "copied_definitions": [
+      "ROOT",
+      "SCENE",
+      "load_panda_spec",
+      "require_position_servo"
+    ],
+    "immediate_source": "..\\机械臂强化学习\\panda_reach\\panda_position.py",
+    "immediate_sha256": "fb0fb1a7be6550f4715dd943b719856b3aa5f09c773d790ef6df7c63f83ed6d0"
+  },
+  "panda_cartesian.py": {
+    "source": "轨迹规划\\src\\panda_cartesian.py",
+    "original_sha256": "d1d2e7cf0ba14c35fa95ac98e9c41fd9605ff93ba82acedb88aba4859440a3a7",
+    "copied_definitions": [
+      "JOINT_NAMES",
+      "TCP_OFFSET_M",
+      "JOINT_MARGIN_RAD",
+      "ORIENTATION_WEIGHT",
+      "IK_DAMPING",
+      "SINGULAR_VALUE_THRESHOLD",
+      "NEAR_SINGULAR_DAMPING",
+      "IK_TOLERANCE",
+      "FloatArray",
+      "Arm",
+      "read_arm",
+      "tcp_position",
+      "unit_quaternion",
+      "rotation_error",
+      "damped_step",
+      "check_contacts",
+      "InverseKinematics",
+      "joint_controls"
+    ],
+    "adaptations": [
+      "Relative package import.",
+      "Use Python copy(MjData) for compatibility with MuJoCo 3.4.0, which has no mj_copyData binding.",
+      "Allow separate TCP offset for the physical pusher.",
+      "Split iterative kinematics from initial full solve. Per-action 4-iteration IK uses separate scratch data with kinematics only, leaving live contact handling to the physical step."
+    ],
+    "immediate_source": "..\\机械臂强化学习\\panda_reach\\panda_cartesian.py",
+    "immediate_sha256": "2d05686c89ce50a86f8b760c6f6a1b344e22be331cb5a5019e5081c319c15380"
+  },
+  "model_assets": {
+    "immediate_source": "..\\机械臂强化学习\\models\\franka_emika_panda",
+    "upstream": "https://github.com/google-deepmind/mujoco_menagerie/tree/370c43965323c0944b433b202aac5058b5f907a9/franka_emika_panda",
+    "license": "Apache-2.0, original LICENSE and README.md included",
+    "adaptations": [
+      "Upstream files copied unchanged",
+      "PandaPush added in push.xml and a sphere geom attached to hand at compile time in control.py"
+    ],
+    "verified_files": 71
+  }
+}

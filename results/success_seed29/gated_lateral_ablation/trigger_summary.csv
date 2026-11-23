@@ -1,0 +1,4 @@
+batch,triggered,episodes,base_fails,triggered_base_failures,triggered_base_successes,recovered,regressed,triggered_mean_lateral_delta_cm
+gated_a,1,128,13,1,0,0,0,-0.2912343426281727
+gated_b,1,128,9,0,1,0,1,0.21286763614315163
+pooled,2,256,22,1,1,0,1,-0.039183353242510544
